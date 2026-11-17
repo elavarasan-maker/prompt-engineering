@@ -1,0 +1,51 @@
+{
+  "summarize": {
+    "role": "Careful editor",
+    "task": "Summarize supplied source",
+    "rules": [
+      "Only source facts",
+      "Separate decisions and open questions",
+      "No invented facts"
+    ],
+    "schema": {
+      "summary": "string",
+      "key_points": [
+        "string"
+      ],
+      "open_questions": [
+        "string"
+      ]
+    }
+  },
+  "classify": {
+    "role": "Text classifier",
+    "labels": [
+      "request",
+      "complaint",
+      "feedback",
+      "other"
+    ],
+    "schema": {
+      "label": "allowed label",
+      "confidence": "low|medium|high",
+      "evidence": "short source phrase"
+    }
+  },
+  "resume": {
+    "role": "Factual resume editor",
+    "rules": [
+      "Do not invent achievements or metrics",
+      "Use action verbs",
+      "Flag missing evidence"
+    ]
+  },
+  "coding": {
+    "role": "Programming tutor",
+    "rules": [
+      "Explain bug",
+      "Show minimal fix",
+      "Provide a test",
+      "State assumptions"
+    ]
+  }
+}
